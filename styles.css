@@ -1,3 +1,22 @@
+:root {
+  /* -----------colors----------- */
+  --color-primary-LinearGradient1: hsl(236, 72%, 79%);
+  --color-primary-LinearGradient2: hsl(237, 63%, 64%);
+  --color-neutral-VeryLightGrayishBlue: hsl(240, 78%, 98%);
+  --color-neutral-LightGrayishBlue: hsl(234, 14%, 74%);
+  --color-neutral-GrayishBlue: hsl(233, 13%, 49%);
+  --color-neutral-DarkGrayishBlue: hsl(232, 13%, 33%);
+
+  /* -----------fonts----------- */
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+}
+
+body {
+  --Font-Family-Montserrat: "Montserrat", sans-serif;
+  /* width: 1440px; */
+}
+
 .pricing {
   display: flex;
   flex-direction: column;
@@ -16,8 +35,8 @@
 .content {
   display: grid;
   height: 600px;
-  grid-template-columns: 320px 320px 320px;
-  grid-auto-rows: 30px 450px 30px;
+  grid-template-columns: 340px 340px 340px;
+  grid-auto-rows: 20px 450px 20px;
   justify-content: center;
   margin: auto;
 }
@@ -34,16 +53,68 @@
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row: 1/4;
-  border: 2px solid black;
+  border: 0;
   border-radius: 10px;
+  background: linear-gradient(135deg, var(--color-primary-LinearGradient1), var(--color-primary-LinearGradient2));
+  color: var(--color-neutral-VeryLightGrayishBlue);
+  text-align: center;
+  padding: 35px 30px 40px 30px;
 }
 
 .content--master {
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row: 2/3;
-  border: 2px solid black;
+  border: 2px solid #000000;
   border-radius: 10px;
+}
+
+.content--name {
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+.professional--name {
+}
+
+.price--annually {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 4.2rem;
+  margin: 20px 0 20px 0;
+}
+
+.dolar {
+  font-size: 2.5rem;
+}
+
+.price--monthly {
+  display: none;
+}
+
+p {
+  margin: 18px 0 18px 0;
+}
+
+.professional--button {
+  width: 100%;
+  height: 45px;
+  border: 0;
+  border-radius: 6px;
+  margin-top: 20px;
+  background-color: var(--color-neutral-VeryLightGrayishBlue);
+  color: var(--color-primary-LinearGradient2);
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--color-neutral-LightGrayishBlue);
 }
 
 /*-----------------------------*/
