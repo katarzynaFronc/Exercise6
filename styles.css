@@ -20,14 +20,96 @@ body {
 .pricing {
   display: flex;
   flex-direction: column;
-  width: 150px;
+  align-items: center;
+  width: 100%;
   margin: auto;
   margin-top: 50px;
+}
+
+.pricing h2 {
+  font-size: 1.8rem;
+  color: var(--color-neutral-GrayishBlue);
 }
 
 .pricing--options {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  width: 340px;
+  margin-bottom: 50px;
+  font-size: 0.8rem;
+  color: var(--color-neutral-LightGrayishBlue);
+}
+
+.pricing--options h3 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* The switch - the box around the slider */
+.pricingSwitch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+  margin: 15px;
+}
+
+/* Hide default HTML checkbox */
+.pricingSwitch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.pricingSlider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.pricingSlider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .pricingSlider {
+  background-color: var(--color-primary-LinearGradient1);
+}
+
+input:focus + .pricingSlider {
+  box-shadow: 0 0 1px var(--color-primary-LinearGradient2);
+}
+
+input:checked + .pricingSlider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+
+/* Rounded sliders */
+.pricingSlider.round {
+  border-radius: 34px;
+  background: linear-gradient(135deg, var(--color-primary-LinearGradient1), var(--color-primary-LinearGradient2));
+  color: var(--color-neutral-VeryLightGrayishBlue);
+}
+
+.pricingSlider.round:before {
+  border-radius: 50%;
 }
 
 /*------------content-----------*/
