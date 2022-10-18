@@ -14,7 +14,10 @@
 
 body {
   --Font-Family-Montserrat: "Montserrat", sans-serif;
-  /* width: 1440px; */
+  background-image: url(./images/bg-top.svg), url(./images/bg-bottom.svg);
+  background-size: 25%;
+  background-repeat: no-repeat;
+  background-position: top right, bottom left;
 }
 
 .pricing {
