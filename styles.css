@@ -14,6 +14,7 @@
 
 body {
   --Font-Family-Montserrat: "Montserrat", sans-serif;
+  background: var(--color-neutral-VeryLightGrayishBlue);
   background-image: url(./images/bg-top.svg), url(./images/bg-bottom.svg);
   background-size: 25%;
   background-repeat: no-repeat;
@@ -30,7 +31,7 @@ body {
 }
 
 .pricing h2 {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   color: var(--color-neutral-GrayishBlue);
 }
 
@@ -39,7 +40,7 @@ body {
   flex-direction: row;
   justify-content: center;
   width: 340px;
-  margin-bottom: 50px;
+  margin-bottom: 45px;
   font-size: 0.8rem;
   color: var(--color-neutral-LightGrayishBlue);
 }
@@ -54,8 +55,8 @@ body {
 .pricingSwitch {
   position: relative;
   display: inline-block;
-  width: 40px;
-  height: 24px;
+  width: 44px;
+  height: 28px;
   margin: 15px;
 }
 
@@ -81,10 +82,10 @@ body {
 .pricingSlider:before {
   position: absolute;
   content: "";
-  height: 18px;
-  width: 18px;
-  left: 3px;
-  bottom: 3px;
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
   background-color: white;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -120,7 +121,7 @@ input:checked + .pricingSlider:before {
 .content {
   display: grid;
   height: 600px;
-  grid-template-columns: 340px 340px 340px;
+  grid-template-columns: repeat(3, 340px);
   grid-auto-rows: 20px 450px 20px;
   justify-content: center;
   margin: auto;
@@ -130,8 +131,6 @@ input:checked + .pricingSlider:before {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row: 2/3;
-  border: 2px solid black;
-  border-radius: 10px;
 }
 
 .content--professional {
@@ -150,16 +149,24 @@ input:checked + .pricingSlider:before {
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row: 2/3;
-  border: 2px solid #000000;
+}
+
+.content--basic,
+.content--master {
+  border: 0;
   border-radius: 10px;
+  background: #fff;
+  text-align: center;
+  padding: 15px 30px 40px 30px;
+  color: var(--color-neutral-GrayishBlue);
 }
 
 .content--name {
   font-size: 1.2rem;
-  margin-top: 20px;
 }
 
 .professional--name {
+  margin-top: 24px;
 }
 
 .price--annually {
@@ -183,20 +190,29 @@ p {
   margin: 18px 0 18px 0;
 }
 
-.professional--button {
+.button {
   width: 100%;
   height: 45px;
   border: 0;
   border-radius: 6px;
   margin-top: 20px;
-  background-color: var(--color-neutral-VeryLightGrayishBlue);
-  color: var(--color-primary-LinearGradient2);
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-hr {
+.button--basic,
+.button--master {
+  background: linear-gradient(135deg, var(--color-primary-LinearGradient1), var(--color-primary-LinearGradient2));
+  color: #fff;
+}
+
+.button--professional {
+  background-color: #fff;
+  color: var(--color-primary-LinearGradient2);
+}
+
+.content hr {
   border: none;
   height: 1px;
   background-color: var(--color-neutral-LightGrayishBlue);
