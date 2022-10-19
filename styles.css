@@ -19,6 +19,7 @@ body {
   background-size: 25%;
   background-repeat: no-repeat;
   background-position: top right, bottom left;
+  width: auto;
 }
 
 .pricing {
@@ -27,7 +28,7 @@ body {
   align-items: center;
   width: 100%;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .pricing h2 {
@@ -120,9 +121,8 @@ input:checked + .pricingSlider:before {
 
 .content {
   display: grid;
-  height: 600px;
-  grid-template-columns: repeat(3, 340px);
-  grid-auto-rows: 20px 450px 20px;
+  grid-template-columns: repeat(3, 320px);
+  grid-auto-rows: 20px 420px 20px;
   justify-content: center;
   margin: auto;
 }
@@ -142,7 +142,7 @@ input:checked + .pricingSlider:before {
   background: linear-gradient(135deg, var(--color-primary-LinearGradient1), var(--color-primary-LinearGradient2));
   color: var(--color-neutral-VeryLightGrayishBlue);
   text-align: center;
-  padding: 35px 30px 40px 30px;
+  padding: 25px 30px 40px 30px;
 }
 
 .content--master {
@@ -157,12 +157,13 @@ input:checked + .pricingSlider:before {
   border-radius: 10px;
   background: #fff;
   text-align: center;
-  padding: 15px 30px 40px 30px;
+  padding: 5px 30px 40px 30px;
   color: var(--color-neutral-GrayishBlue);
 }
 
 .content--name {
   font-size: 1.2rem;
+  margin-bottom: 10px;
 }
 
 .professional--name {
@@ -175,7 +176,7 @@ input:checked + .pricingSlider:before {
   justify-content: space-evenly;
   align-items: center;
   font-size: 4.2rem;
-  margin: 20px 0 20px 0;
+  margin: 0 0 20px 0;
 }
 
 .dolar {
@@ -216,11 +217,16 @@ p {
   border: none;
   height: 1px;
   background-color: var(--color-neutral-LightGrayishBlue);
+  margin: 0;
 }
 
 /*-----------------------------*/
 
 /*------------footer-----------*/
+
+footer {
+  padding-top: 20px;
+}
 
 .footer--attribution {
   font-size: 11px;
@@ -231,3 +237,45 @@ p {
 }
 
 /*-----------------------------*/
+
+/*-------------media------------*/
+
+@media screen and (max-width: 375px) {
+  body {
+    background-image: url(./images/bg-top.svg);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: 225px -25px;
+  }
+
+  .content {
+    height: auto;
+    grid-template-columns: (1, 340px);
+    grid-auto-rows: 450px 450px 450px;
+    gap: 25px;
+    width: 80%;
+  }
+
+  .content--basic {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  .content--professional {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+  .content--master {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+
+  .content--basic,
+  .content--professional,
+  .content--master {
+    padding: 15px 30px 40px 30px;
+  }
+}
+
+/*------------------------------*/
