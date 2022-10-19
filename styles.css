@@ -93,11 +93,13 @@ body {
 }
 
 input:checked + .pricingSlider {
-  background-color: var(--color-primary-LinearGradient1);
+  background-color: var(--color-primary-LinearGradient2);
 }
 
-input:focus + .pricingSlider {
+input:hover + .pricingSlider {
   box-shadow: 0 0 1px var(--color-primary-LinearGradient2);
+  background: var(--color-primary-LinearGradient1);
+  border: var(--color-primary-LinearGradient1);
 }
 
 input:checked + .pricingSlider:before {
@@ -211,6 +213,22 @@ p {
 .button--professional {
   background-color: #fff;
   color: var(--color-primary-LinearGradient2);
+}
+
+.button:hover {
+  background: none;
+  cursor: pointer;
+}
+
+.button--basic:hover,
+.button--master:hover {
+  color: var(--color-primary-LinearGradient2);
+  border: 1px solid #000;
+}
+
+.button--professional:hover {
+  color: #fff;
+  border: 1px solid #fff;
 }
 
 .content hr {
