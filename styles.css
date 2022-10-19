@@ -20,6 +20,7 @@ body {
   background-repeat: no-repeat;
   background-position: top right, bottom left;
   width: auto;
+  height: 100vh;
 }
 
 .pricing {
@@ -133,6 +134,7 @@ input:checked + .pricingSlider:before {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row: 2/3;
+  border-radius: 10px 0 0 10px;
 }
 
 .content--professional {
@@ -145,22 +147,24 @@ input:checked + .pricingSlider:before {
   color: var(--color-neutral-VeryLightGrayishBlue);
   text-align: center;
   padding: 25px 30px 40px 30px;
+  box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.1);
 }
 
 .content--master {
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row: 2/3;
+  border-radius: 0 10px 10px 0;
 }
 
 .content--basic,
 .content--master {
   border: 0;
-  border-radius: 10px;
   background: #fff;
   text-align: center;
   padding: 5px 30px 40px 30px;
   color: var(--color-neutral-GrayishBlue);
+  box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.1);
 }
 
 .content--name {
